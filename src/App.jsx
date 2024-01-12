@@ -1,30 +1,35 @@
 import './App.css';
 import lake from "./image/lake.JPG";
 import GallaryFooter from './components/GallaryFooter';
+import Header from './components/Header';
+import Body from './components/Body';
+
 
 const imageData = [
-  {
-    id:1,
-    img:lake 
-  },
-  {
-    id:2,
-    img:lake
-  },
-  {
-    id:3,
-    img:lake
-  },
-  {
-    id:4,
-    img:lake
-  }
-]
+    {
+      id:1,
+      img:lake 
+    },
+    {
+      id:2,
+      img:lake
+    },
+    {
+      id:3,
+      img:lake
+    },
+    {
+      id:4,
+      img:lake
+    }
+  ]
+
 
 function App() {
   return (
     <div>
-      <header>
+      <Header/>
+      {/* <header>
         <img className="logo" src="https://s3.ap-south-1.amazonaws.com/kalvi-education.github.io/front-end-web-development/Kalvium-Logo.png" alt=""></img>
         <nav>
           <ul className='nav_links'>
@@ -35,10 +40,10 @@ function App() {
 
         </nav>
         <a className='cta' href='#'><button>Contact</button></a>
-      </header>
+      </header> */}
 
       <div>
-        {
+        {/* {
           imageData.map(image=>{
             return(
               <div key={image.id} className="column">
@@ -46,7 +51,9 @@ function App() {
               </div>
             )
           })
-        }
+        } */}
+        <Body image={imageData} />
+       
       </div>
       {/* adding footer component */}
       <GallaryFooter/> 
